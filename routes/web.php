@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'role:student'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    // student routes
 });
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    // admin routes
+});
+
 
 Route::get('/', function () {
     return view('welcome');
