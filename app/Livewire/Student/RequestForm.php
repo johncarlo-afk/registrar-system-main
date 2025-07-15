@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class RequestForm extends Component
 {
-    public $document_type;
+    public $name, $student_number, $course, $section, $document_type;
 
     public function submit()
     {
